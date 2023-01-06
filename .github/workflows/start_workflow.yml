@@ -1,0 +1,21 @@
+name: start
+on: push
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup project
+      uses: actions/checkout@v2
+      run: make setup
+  test:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run tests
+      run: make test
+  lint:
+    needs: [setup, test]
+      runs-on: ubuntu-latest
+      steps:
+        - name: Run linter
+        run: make lint
