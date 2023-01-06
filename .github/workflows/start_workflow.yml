@@ -6,7 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: make setup
+      - name: Start install and build project
+        run: make setup
       - name: Run tests
         run: make test
       - name: Run linter
