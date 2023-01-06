@@ -1,3 +1,6 @@
+### Actions status:
+[![Actions Status](https://github.com/EvgenyCh97/hexlet-ci-app/workflows/start_workflow/badge.svg)](https://github.com/EvgenyCh97/hexlet-ci-app/blob/main/.github/workflows/start_workflow.yml)
+
 # Example app for CI Hexlet course
 
 Starting boilerplate of [Strapi](https://strapi.io/) application
