@@ -7,15 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: make setup
-  test:
-    needs: setup
-    name: Run tests
-    runs-on: ubuntu-latest
-    steps:
-      - run: make test
-  lint:
-    needs: [setup, test]
-    name: Run linter
-    runs-on: ubuntu-latest
-    steps:
-      - run: make lint
+      - name: Run tests
+        run: make test
+      - name: Run linter
+        run: make lint
