@@ -1,5 +1,5 @@
 ### Actions status:
-[![Actions Status](https://github.com/EvgenyCh97/hexlet-components/hexlet-ci-app/workflows/start-workflow/badge.svg)](https://github.com/EvgenyCh97/hexlet-ci-app/actions)
+[![Actions Status](https://github.com/EvgenyCh97/hexlet-ci-app/workflows/start-workflow/badge.svg)](https://github.com/EvgenyCh97/hexlet-ci-app/actions)
 
 # Example app for CI Hexlet course
 
