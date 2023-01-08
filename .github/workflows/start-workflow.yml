@@ -22,8 +22,11 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           
-      - name: Caching npm dependencies
-        uses: actions/setup-node@v3
+  caching:
+    name: Caching npm dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: 'npm'
