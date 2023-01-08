@@ -5,10 +5,26 @@ jobs:
     name: Setup project
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      
       - name: Start install and build project
         run: make setup
+        
       - name: Run tests
         run: make test
+        
       - name: Run linter
         run: make lint
+        
+      - name: Run Snyk to check for vulnerabilities
+      - uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+          
+      - name: Caching npm dependencies
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test
